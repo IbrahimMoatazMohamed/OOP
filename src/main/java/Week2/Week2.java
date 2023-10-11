@@ -8,6 +8,7 @@ public class Week2{
         Random random = new Random();
         tenthTask(reader, random);
     }
+
     public static void firstTask(Scanner reader){
         System.out.print("Type the password: ");
         String input = reader.nextLine();
@@ -23,6 +24,7 @@ public class Week2{
         System.out.println("Right!");
         System.out.println("\nThe secret is: jryy qbar!");
     }
+
     public static void secondTask(){
         Scanner reader = new Scanner(System.in);
         int sum = 0;
@@ -41,6 +43,7 @@ public class Week2{
 
         System.out.println("Sum: " + sum);
     }
+
     public static void thirdTask(){
         Scanner reader = new Scanner(System.in);
         int sum = 0;
@@ -54,6 +57,7 @@ public class Week2{
         }
         System.out.println("Sum in the end: " + sum);
     }
+
     public static void fourthTask(Scanner reader){
         System.out.print("First: ");
         int first = Integer.parseInt(reader.nextLine());
@@ -63,6 +67,7 @@ public class Week2{
             System.out.println(first);
         }
     }
+
     public static void fifthTask(Scanner reader){
         System.out.print("Type a number: ");
         int num = Integer.parseInt(reader.nextLine());
@@ -74,6 +79,7 @@ public class Week2{
         }
         System.out.println("The result is " + result);
     }
+
 //   sixthTask
     public static void printText(Scanner reader){
         System.out.print("How many times: ");
@@ -84,6 +90,7 @@ public class Week2{
             i++;
         }
     }
+
 //    seventhTask
     public static void printStars(int num){
         for(int i  = 0; i < num; i++){
@@ -91,6 +98,7 @@ public class Week2{
         }
         System.out.println();
     }
+
 //    eighthTask
     public static void drawStarsPiramid(int num){
         for(int i = 1; i <= num; i++){
@@ -100,6 +108,7 @@ public class Week2{
             System.out.println();
         }
     }
+
     public static void drawStarsPiramid2(int num){
 
         for(;num > 0; num--){
@@ -109,6 +118,7 @@ public class Week2{
             System.out.println();
         }
     }
+
 //    ninthTask
     public static void drawNumbersPiramid(int num){
     for(int i = 1; i <= num; i++){
@@ -118,6 +128,7 @@ public class Week2{
         System.out.println();
     }
 }
+
     public static void drawNumbersPiramid2(int num){
         for(int i = 1; i <= num; i++){
             for(int j = 1; j <= i; j++){
@@ -130,6 +141,7 @@ public class Week2{
             System.out.println(i +" " + i  +" " + i);
         }
     }
+
     public static void tenthTask(Scanner reader, Random random){
         int guess = random.nextInt(101);
         System.out.print("Guess a number: ");
