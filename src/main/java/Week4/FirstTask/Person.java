@@ -1,10 +1,14 @@
-package Week4.firstTask;
+package Week4.FirstTask;
 
 public class Person {
     private String street;
     private String name;
     private String contry;
     private int age;
+    public Person(String name, String street){
+        this.name = name;
+        this.street = street;
+    }
     public Person(String street, String name, String contry, int age) {
         this.street = street;
         this.name = name;

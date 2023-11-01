@@ -1,4 +1,4 @@
-package Week4.secondTask;
+package Week4.SecondTask;
 
 public class Shape {
     private String color;

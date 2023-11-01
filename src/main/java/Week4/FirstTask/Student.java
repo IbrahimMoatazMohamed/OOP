@@ -1,4 +1,4 @@
-package Week4.firstTask;
+package Week4.FirstTask;
 
 public class Student extends Person {
     private int credits = 0;

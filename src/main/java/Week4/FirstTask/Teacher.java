@@ -1,6 +1,4 @@
-package Week4.firstTask;
-
-import Week4.firstTask.Person;
+package Week4.FirstTask;
 
 public class Teacher extends Person {
     private int salary;
