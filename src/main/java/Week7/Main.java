@@ -9,6 +9,7 @@ public class Main {
         lambda.logMessage(man.getName());
         lambda.logMessage(father.name());
         */
+
         /* Library
         LibraryCatalog libraryCatalog = new LibraryCatalog();
 
@@ -28,6 +29,7 @@ public class Main {
 
         libraryCatalog.displayCatalog();
          */
+
         /*EmployeeManagementSystem
         EmployeeManagementSystem management = new EmployeeManagementSystem();
         ArrayList<Employee> employeeList = new ArrayList<>();
