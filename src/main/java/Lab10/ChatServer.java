@@ -14,12 +14,9 @@ public class ChatServer {
             System.out.println("Server started at port: " + port);
             while (true) {
                 Socket clientSocket = serverSocket.accept();
-
-                InputStream inputStream = clientSocket.getInputStream();
-                byte[] buffer = new byte[1024];
-                int bytesRead = inputStream.read(buffer);
-                String message = new String(buffer, 0, bytesRead);
-                ClientHandler clientHandler = new ClientHandler(clientSocket, message.substring(0, message.indexOf("\n") - 1));
+                BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+                String message = reader.readLine();
+                ClientHandler clientHandler = new ClientHandler(clientSocket, message);
                 clients.add(clientHandler);
                 new Thread(clientHandler).start();
             }
