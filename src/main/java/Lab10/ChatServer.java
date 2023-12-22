@@ -21,7 +21,7 @@ public class ChatServer {
                 new Thread(clientHandler).start();
             }
         } catch (IOException e) {
-            //e.printStackTrace();
+            e.printStackTrace();
         }
     }
 
@@ -52,7 +52,7 @@ public class ChatServer {
                 broadcastMessage(username + " joined the chat", this);
 
                 String clientMessage;
-                while ((clientMessage = reader.readLine()) != null) {
+                while ((clientMessage = reader.readLine()) != null && !clientMessage.equals("I want to leave")) {
                     broadcastMessage(clientMessage, this);
                 }
             } catch (IOException e) {
@@ -63,7 +63,7 @@ public class ChatServer {
                     clients.remove(this);
                     broadcastMessage(username + " left the chat", this);
                 } catch (IOException e) {
-                    //e.printStackTrace();
+                    e.printStackTrace();
                 }
             }
         }
