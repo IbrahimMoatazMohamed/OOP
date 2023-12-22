@@ -20,7 +20,7 @@ public class ChatClient {
             Socket socket = new Socket(serverIP, serverPort);
             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
-            BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
+            Scanner message = new Scanner(System.in);
 
 
             Thread receiveThread = new Thread(() -> {
@@ -36,7 +36,7 @@ public class ChatClient {
             receiveThread.start();
 
             String clientMessage;
-            while ((clientMessage = consoleReader.readLine()) != null) {
+            while ((clientMessage = message.readLine()) != null) {
                 writer.println(clientMessage);
             }
         } catch (IOException e) {
