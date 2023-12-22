@@ -22,7 +22,6 @@ public class ChatClient {
             PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
             Scanner message = new Scanner(System.in);
 
-
             Thread receiveThread = new Thread(() -> {
                 String serverMessage;
                 try {
@@ -36,8 +35,10 @@ public class ChatClient {
             receiveThread.start();
 
             String clientMessage;
-            while ((clientMessage = message.readLine()) != null) {
+            while ((clientMessage = message.nextLine()) != null) {
                 writer.println(clientMessage);
+                if(clientMessage.equals("I want to leave"))
+                    break;
             }
         } catch (IOException e) {
             e.printStackTrace();
