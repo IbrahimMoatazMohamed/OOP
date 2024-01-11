@@ -109,7 +109,7 @@ public class ListController implements Initializable {
 
     public void reinitializeTable() {
         try {
-            students.clear(); // Clear existing data in the class-level list
+            students.clear();
 
             rs = DBConnection.getAll();
             while (rs.next()) {
