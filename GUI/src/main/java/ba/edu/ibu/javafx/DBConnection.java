@@ -94,10 +94,14 @@ public class DBConnection {
             PreparedStatement pst = connection.prepareStatement("Select * from students");
             ResultSet rs = pst.executeQuery();
             while (rs.next()){
-                result += " " + rs.getString("name");
-                result += " " + rs.getString("surname");
-                result += " " + rs.getString("year");
-                result += " " + rs.getString("cycle");
+                if (!result.contains(rs.getString("name")))
+                    result += " " + rs.getString("name");
+                if (!result.contains(rs.getString("surname")))
+                    result += " " + rs.getString("surname");
+                if (!result.contains(rs.getString("year")))
+                    result += " " + rs.getString("year");
+                if (!result.contains(rs.getString("cycle")))
+                    result += " " + rs.getString("cycle");
             }
             return result;
         } catch (SQLException e) {
